@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Antra.ClassAssignment
+{
+    class CustomerFactory
+    {
+        public Customer GetObject(int choice)
+        {
+            switch (choice)
+            {
+                case (int)Options.BroneCustomer:
+                    return new BroneCustomer();
+
+                case (int)Options.SilverCustomer:
+                    return new SilverCustomer();
+                case (int)Options.GoldCustomer:
+                    return new GoldCustomer();
+                case (int)Options.PlatinumCustomer:
+                    return new PlatinumCustomer();
+                default:
+                    Console.WriteLine("Invalid Option");
+                    return null;
+            }
+        }
+    }
+
+}

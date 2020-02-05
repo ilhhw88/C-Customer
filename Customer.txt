@@ -1,0 +1,87 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Antra.ClassAssignment
+{
+    class Customer
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string City { get; set; }
+        public string Mobile { get; set; }
+        public decimal discount { get; set; }
+        public virtual void AddCustomer()
+        {
+            Console.Write("Enter Id -> ");
+            Id = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter Name -> ");
+            Name = Console.ReadLine();
+
+            Console.Write("Enter City -> ");
+            City = Console.ReadLine();
+
+            Console.Write("Enter Mobile -> ");
+            Mobile = Console.ReadLine();
+            Console.Write("Enter discount->");
+            discount = Convert.ToInt32(Console.ReadLine());
+        }
+
+        public virtual void PrintCustomer()
+        {
+            Console.WriteLine("Id = " + Id);
+            Console.WriteLine("Name = " + Name);
+            Console.WriteLine("City = " + City);
+            Console.WriteLine("Mobile = " + Mobile);
+            Console.WriteLine("discount = " + discount);
+        }
+    }
+    class BroneCustomer : Customer
+    {
+        public void AddBroneCustomer()
+        {
+            AddCustomer();
+        }
+        public void PrintBroneCustomer()
+        {
+            PrintCustomer();
+        }
+
+    }
+    class SilverCustomer : Customer
+    {
+        public void AddSilverCustomer()
+        {
+            AddCustomer();
+        }
+        public void PrintSilverCustomer()
+        {
+            PrintCustomer();
+        }
+       
+
+    }
+
+    class GoldCustomer : Customer
+    {
+        public void AddGoldCustomer()
+        {
+            AddCustomer();
+        }
+        public void PrintGoldCustomer()
+        {
+            PrintCustomer();
+        }
+        }
+    class PlatinumCustomer : Customer
+    {
+        public void AddPlatinumCustomer()
+        {
+            AddCustomer();
+        }
+        public void PrintPlatinumCustomer()
+        {
+            PrintCustomer();
+        }
+    }
+    }

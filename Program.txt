@@ -1,0 +1,23 @@
+using System;
+
+namespace Antra.ClassAssignment
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Menus m = new Menus();
+            m.Print();
+            int choice = Convert.ToInt32(Console.ReadLine());
+            Customer customer = new CustomerFactory().GetObject(choice);
+            if (customer != null)
+            {
+                customer.AddCustomer();
+                customer.PrintCustomer();
+            }
+
+
+            Console.Read();
+        }
+    }
+}
